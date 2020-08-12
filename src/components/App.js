@@ -1,9 +1,24 @@
 import React from "react";
 
+// Component
+import SearchBar from "./Search";
+import Weather from "./Weather";
+
+
+
 const App = () => {
     return (
-        <div>
-            <h1>Weather App</h1>
+        <div className="App flex justify-center pt-6">
+
+            <div className="text-white mb-8 w-128">
+
+                {/* SearchBar Component */}
+                <SearchBar title="Taper une ville et appuyer sur entrer"/>
+
+                {/* Loading || Weather Component */}
+                <Weather/>
+            </div>
+
         </div>
     )
 }
