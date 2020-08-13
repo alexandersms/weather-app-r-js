@@ -1,9 +1,6 @@
 import React, {useState} from "react";
 
-// Modal Componant
-import Modal from "./Modal"
-
-
+// Format Date
 const dateFormat = (timestamp) => {
     const newDate = new Date(timestamp * 1000);
     const days = ["DIM","LUN","MAR","MER","JEU","VEN","SAM"];
@@ -12,8 +9,10 @@ const dateFormat = (timestamp) => {
 }
 
 const Forecast = ({ forecast }) => {
+
     const [state, setState] = useState({forecast, data: null, isShow: false});
 
+    // Toggle Details Forecast
     const toggleDetailsForecast = (index) => {
         setState({ ...state, data: state.forecast[index] })
     }
@@ -66,22 +65,6 @@ const Forecast = ({ forecast }) => {
 
                     ))
                 }
-
-
-            {/*
-                <ul className="block w-11/12 my-4 mx-auto">
-                <li className="flex align-center flex-col">
-                    <h4 onClick={toggleForecast}
-                    className="cursor-pointer px-5 py-3 bg-gray-700 text-white inline-block hover:bg-gray-600 hover:opacity-75 hover:shadow hover:-mb-3 rounded-t">Accordion item 1</h4>
-                    {
-                        visible && <p className="border py-4 px-2">
-                            This is made with Alpine JS and Tailwind CSS
-                        </p>
-                    }
-            </li>
-            </ul>
-
-            */}
 
         </div>
     )
