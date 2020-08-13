@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 
 const Weather = ({ data }) => {
 
-    const forecastData = useSelector(state => state.forecast.data);
+    const forecastData = useSelector(state => state.forecast.data.list);
     const loading = useSelector(state => state.forecast.loading);
 
     return (
