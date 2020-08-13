@@ -1,9 +1,11 @@
 import React from "react";
 import Forecast from "../Forecast";
-//import {useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 
 const Weather = ({ data }) => {
-    //const forecastData = useSelector(state => state.forecast.data);
+
+    const forecastData = useSelector(state => state.forecast.data);
+    const loading = useSelector(state => state.forecast.loading);
 
     return (
 
@@ -27,8 +29,12 @@ const Weather = ({ data }) => {
                 </div>
             </div>
 
-            {/* Future Weather */}
-            <Forecast/>
+            {/* Loading || Future Weather */}
+            {
+                loading ? null:
+                    forecastData && <Forecast forecast={forecastData}/>
+            }
+
         </div>
     )
 }

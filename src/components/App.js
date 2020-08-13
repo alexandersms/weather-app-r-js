@@ -19,8 +19,6 @@ const App = () => {
                 <SearchBar title="Taper une ville et appuyer sur entrer"/>
 
                 {/* Loading || Weather Component */}
-                {console.log(loading)}
-
                 {
                     loading ? null:
                         weatherData && <Weather data={weatherData}/>
