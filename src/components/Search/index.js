@@ -44,7 +44,7 @@ const SearchBar = ({title}) => {
             <form onSubmit={handleSubmit}>
                 <input
                     type="search"
-                    className="w-full p-2 rounded-lg"
+                    className="input-search w-full p-2 rounded-lg"
                     placeholder={title}
                     value={city}
                     onChange={handleChange}

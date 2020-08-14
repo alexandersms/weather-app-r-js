@@ -15,6 +15,7 @@ const App = () => {
 
             <div className="text-white mb-8 w-128">
 
+                <h1 className="text-4xl text-blue-400 text-center font-semibold mb-2">Weather App ❄️</h1>
                 {/* SearchBar Component */}
                 <SearchBar title="Taper une ville et appuyer sur entrer"/>
 

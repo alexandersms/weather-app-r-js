@@ -31,7 +31,7 @@ const Forecast = ({ forecast }) => {
                 {
                     state.forecast.map((data, index) => (
                         <div key={index}>
-                            <div onClick={() => toggleDetailsForecast(index)} className="flex items-center cursor-pointer px-3 py-1 hover:bg-gray-600 hover:opacity-75 hover:shadow">
+                            <div onClick={() => toggleDetailsForecast(index)} className="details-forecast flex items-center cursor-pointer px-3 py-1 hover:bg-gray-600 hover:opacity-75 hover:shadow">
                                 <div className="w-1/6 text-sm text-gray-200">{dateFormat(data.dt)}</div>
                                 <div className="w-4/6 flex items-center">
                                     <div style={{ width: "65px" }}>
